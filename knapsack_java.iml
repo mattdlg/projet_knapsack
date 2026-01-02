@@ -10,7 +10,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/choco-solver-4.10.18-jar-with-dependencies.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/choco-solver-4.10.18-jar-with-dependencies.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/ortools-java-9.9.3963.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
