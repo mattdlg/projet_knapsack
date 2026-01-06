@@ -506,7 +506,7 @@ public class KnapsackSolver {
 
         // voisinage : relaxation aléatoire de 15% des variables
         IntVar[] xInt = Arrays.stream(x).toArray(IntVar[]::new);
-        solver.setLNS(INeighborFactory.propagationGuided(xInt));
+        solver.setLNS(INeighborFactory.propagationGuided(xInt)); // amélioration possible : définir la solution initiale à partir de la solution greedy
 
         // Stratégie Simple repair
         solver.setSearch(Search.intVarSearch(
@@ -699,6 +699,8 @@ public class KnapsackSolver {
                 false,
                 inst.optimalValue
         );
+
+        // amélioration possible : relancer plusieurs fois et garder la meilleure solution.
     }
 
 
