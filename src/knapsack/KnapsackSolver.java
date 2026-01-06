@@ -89,7 +89,7 @@ public class KnapsackSolver {
                 br = new BufferedReader(new InputStreamReader(is));
             }
 
-            List<String> lines = br.lines().map(String::trim).filter(s -> !s.isEmpty()).collect(Collectors.toList());
+            List<String> lines = br.lines().map(String::trim).filter(s -> !s.isEmpty()).toList();
             br.close();
 
             if (lines.size() < 2) {
@@ -160,8 +160,8 @@ public class KnapsackSolver {
 
         String[][] files = {
                 { // faciles
-                	"kplib/00Uncorrelated/n00050/R01000/s000.kp",
-                    /*"kplib/00Uncorrelated/n00050/R01000/s001.kp",
+                	/*"kplib/00Uncorrelated/n00050/R01000/s000.kp",
+                    "kplib/00Uncorrelated/n00050/R01000/s001.kp",
                 	"kplib/01WeaklyCorrelated/n00050/R01000/s000.kp",
                 	"kplib/02StronglyCorrelated/n00050/R01000/s000.kp",
                 	"kplib/03InverseStronglyCorrelated/n00050/R01000/s000.kp",
@@ -170,10 +170,21 @@ public class KnapsackSolver {
                 	"kplib/06UncorrelatedWithSimilarWeights/n00050/R01000/s000.kp",
                 	"kplib/07SpannerUncorrelated/n00050/R01000/s000.kp",
                 	"kplib/08SpannerWeaklyCorrelated/n00050/R01000/s000.kp"*/
+                    "kplib/02StronglyCorrelated/n00050/R01000/s000.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s001.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s002.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s003.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s004.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s005.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s006.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s007.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s008.kp",
+                    "kplib/02StronglyCorrelated/n00050/R01000/s009.kp"
                 },
+
                 { // moyens
-                	"kplib/00Uncorrelated/n00100/R01000/s000.kp",
-                	/*"kplib/00Uncorrelated/n00100/R01000/s001.kp",
+                	/*"kplib/00Uncorrelated/n00100/R01000/s000.kp",
+                	"kplib/00Uncorrelated/n00100/R01000/s001.kp",
                 	"kplib/01WeaklyCorrelated/n00100/R01000/s000.kp",
                 	"kplib/01WeaklyCorrelated/n00100/R01000/s001.kp",
                 	"kplib/02StronglyCorrelated/n00100/R01000/s000.kp",
@@ -182,10 +193,20 @@ public class KnapsackSolver {
                 	"kplib/05SubsetSum/n00100/R01000/s000.kp",
                 	"kplib/06UncorrelatedWithSimilarWeights/n00100/R01000/s000.kp",
                 	"kplib/07SpannerUncorrelated/n00100/R01000/s000.kp"*/
+                    "kplib/02StronglyCorrelated/n00100/R01000/s000.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s001.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s002.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s003.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s004.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s005.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s006.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s007.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s008.kp",
+                    "kplib/02StronglyCorrelated/n00100/R01000/s009.kp"
                 },
                 { // difficiles
-                	"kplib/00Uncorrelated/n01000/R01000/s000.kp",
-                	/*"kplib/00Uncorrelated/n01000/R01000/s001.kp",
+                	/*"kplib/00Uncorrelated/n01000/R01000/s000.kp",
+                	"kplib/00Uncorrelated/n01000/R01000/s001.kp",
                     "kplib/01WeaklyCorrelated/n01000/R01000/s000.kp",
                     "kplib/02StronglyCorrelated/n01000/R01000/s000.kp",
                     "kplib/03InverseStronglyCorrelated/n01000/R01000/s000.kp",
@@ -194,6 +215,16 @@ public class KnapsackSolver {
                     "kplib/06UncorrelatedWithSimilarWeights/n01000/R01000/s000.kp",
                     "kplib/07SpannerUncorrelated/n01000/R01000/s000.kp",
                     "kplib/08SpannerWeaklyCorrelated/n01000/R01000/s000.kp"*/
+                    "kplib/02StronglyCorrelated/n01000/R01000/s000.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s001.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s002.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s003.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s004.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s005.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s006.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s007.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s008.kp",
+                    "kplib/02StronglyCorrelated/n01000/R01000/s009.kp"
                 }
         };
         String[] difficulties = {"facile", "moyen", "difficile"};
@@ -218,26 +249,42 @@ public class KnapsackSolver {
         return instances;
     }
 
+    // ===================== Méthodes Helper ============================
+    static int[] orderByRatio(Instance inst) {
+        Integer[] idx = new Integer[inst.n];
+        for (int i = 0; i < inst.n; i++) idx[i] = i;
+
+        Arrays.sort(idx, (i, j) ->
+                Double.compare(
+                        (double) inst.profits[j] / inst.weights[j],
+                        (double) inst.profits[i] / inst.weights[i]
+                )
+        );
+
+        return Arrays.stream(idx).mapToInt(Integer::intValue).toArray();
+    }
+
     // ===================== Méthodes de résolution =====================
     static Result solveCompleteFirstFail(Instance inst, long timeLimit) {
         Model model = new Model("Knapsack");
         BoolVar[] x = model.boolVarArray("x", inst.n);
         IntVar totalProfit = model.intVar("profit", 0, Arrays.stream(inst.profits).sum());
-        model.scalar(x, inst.weights, "<=", inst.capacity).post();
-        model.scalar(x, inst.profits, "=", totalProfit).post();
+        IntVar knapsackWeight = model.intVar("weight", 0, inst.capacity);
+
+        model.knapsack(x, knapsackWeight, totalProfit, inst.weights, inst.profits).post(); // use knapsack global constraint for specialization of the CSP for the problem
+        model.setObjective(Model.MAXIMIZE, totalProfit);
 
         Solver solver = model.getSolver();
         solver.setSearch(Search.inputOrderLBSearch(x));
         solver.limitTime(timeLimit);
 
         long start = System.currentTimeMillis();
-        model.setObjective(Model.MAXIMIZE, totalProfit);
 
         int bestValue = 0;
         while (solver.solve()) bestValue = totalProfit.getValue();
 
         long elapsed = System.currentTimeMillis() - start;
-        boolean optimal = solver.isStopCriterionMet() == false && solver.getSolutionCount() > 0;
+        boolean optimal = !solver.isStopCriterionMet() && solver.getSolutionCount() > 0;
 
         return new Result(inst.name, "Complete_FirstFail", bestValue, elapsed, (int)solver.getNodeCount(), optimal, inst.optimalValue);
     }
@@ -246,24 +293,75 @@ public class KnapsackSolver {
         Model model = new Model("Knapsack");
         BoolVar[] x = model.boolVarArray("x", inst.n);
         IntVar totalProfit = model.intVar("profit", 0, Arrays.stream(inst.profits).sum());
-        model.scalar(x, inst.weights, "<=", inst.capacity).post();
-        model.scalar(x, inst.profits, "=", totalProfit).post();
+        IntVar knapsackWeight = model.intVar("weight", 0, inst.capacity);
+
+        model.knapsack(x, knapsackWeight, totalProfit, inst.weights, inst.profits).post();
+        model.setObjective(Model.MAXIMIZE, totalProfit);
 
         Solver solver = model.getSolver();
         solver.setSearch(Search.domOverWDegSearch(x));
         solver.limitTime(timeLimit);
 
         long start = System.currentTimeMillis();
-        model.setObjective(Model.MAXIMIZE, totalProfit);
 
         int bestValue = 0;
         while (solver.solve()) bestValue = totalProfit.getValue();
 
         long elapsed = System.currentTimeMillis() - start;
-        boolean optimal = solver.isStopCriterionMet() == false && solver.getSolutionCount() > 0;
+        boolean optimal = !solver.isStopCriterionMet() && solver.getSolutionCount() > 0;
 
         return new Result(inst.name, "Complete_DomOverWDeg", bestValue, elapsed, (int)solver.getNodeCount(), optimal, inst.optimalValue);
     }
+
+    static Result solveCompleteRatioFirst(Instance inst, long timeLimit) {
+        Model model = new Model("Knapsack-Ratio");
+
+        BoolVar[] x = model.boolVarArray("x", inst.n);
+        IntVar totalProfit = model.intVar("profit", 0, Arrays.stream(inst.profits).sum());
+        IntVar totalWeight = model.intVar("weight", 0, inst.capacity);
+
+        model.knapsack(x, totalWeight, totalProfit, inst.weights, inst.profits).post();
+        model.setObjective(Model.MAXIMIZE, totalProfit);
+
+        int[] order = orderByRatio(inst);
+
+        Solver solver = model.getSolver();
+        // On test les objets par ordre décroissants du ratio profit/poids
+        solver.setSearch(Search.intVarSearch(
+                vars -> {
+                    for (int i : order) {
+                        if (!vars[i].isInstantiated()) return vars[i];
+                    }
+                    return null;
+                },
+                var -> 1, // On essaie de mettre les objets en priorité
+                x
+        ));
+
+        solver.limitTime(timeLimit);
+
+        long start = System.currentTimeMillis();
+        int bestValue = 0;
+
+        while (solver.solve()) {
+            bestValue = totalProfit.getValue();
+        }
+
+        long elapsed = System.currentTimeMillis() - start;
+
+        boolean optimal = !solver.isStopCriterionMet();
+
+        return new Result(
+                inst.name,
+                "Complete_RatioFirst",
+                bestValue,
+                elapsed,
+                (int) solver.getNodeCount(),
+                optimal,
+                inst.optimalValue
+        );
+    }
+
 
     static Result solveCompleteMILP_ORTools(Instance inst, long timeLimit) {
         MPSolver solver = MPSolver.createSolver("CBC_MIXED_INTEGER_PROGRAMMING");
@@ -314,7 +412,7 @@ public class KnapsackSolver {
         return new Result(inst.name, "Incomplete_LNS", bestValue, elapsed, (int)solver.getNodeCount(), false, inst.optimalValue);
     }*/
     
-    static Result solveIncompleteLNS(Instance inst, long timeLimit) {
+    /*static Result solveIncompleteLNS(Instance inst, long timeLimit) {
 
         long startTime = System.currentTimeMillis();
         Random rand = new Random(42);
@@ -347,13 +445,13 @@ public class KnapsackSolver {
         //  2) Boucle LNS
         while (System.currentTimeMillis() - startTime < timeLimit) {
 
-            Model model = new Model("Knapsack_LNS");
+            Model model = new Model("Knapsack");
+            BoolVar[] x = model.boolVarArray("x", inst.n);
+            IntVar totalProfit = model.intVar("profit", 0, Arrays.stream(inst.profits).sum());
+            IntVar knapsackWeight = model.intVar("weight", 0, inst.capacity);
 
-            BoolVar[] x = model.boolVarArray("x", n);
-            IntVar profit = model.intVar("profit", 0, Arrays.stream(inst.profits).sum());
-
-            model.scalar(x, inst.weights, "<=", inst.capacity).post();
-            model.scalar(x, inst.profits, "=", profit).post();
+            model.knapsack(x, knapsackWeight, totalProfit, inst.weights, inst.profits).post();
+            model.setObjective(Model.MAXIMIZE, totalProfit);
 
             
             // 3) Fixation partielle (voisinage)
@@ -368,10 +466,9 @@ public class KnapsackSolver {
             Solver solver = model.getSolver();
             solver.setSearch(Search.randomSearch(x, rand.nextLong()));
             solver.limitTime(100); // 100 ms par sous-problème
-            model.setObjective(Model.MAXIMIZE, profit);
 
             while (solver.solve()) {
-                int val = profit.getValue();
+                int val = totalProfit.getValue();
                 if (val > bestValue) {
                     bestValue = val;
                     for (int i = 0; i < n; i++) {
@@ -394,45 +491,41 @@ public class KnapsackSolver {
                 false,
                 inst.optimalValue
         );
-    }
+    }*/
     
-    /*static Result solveIncompleteLNS(Instance inst, long timeLimit) {
-        Model model = new Model("Knapsack_LNS");
+    static Result solveIncompleteLNS(Instance inst, long timeLimit) {
+        Model model = new Model("Knapsack-LNS");
         BoolVar[] x = model.boolVarArray("x", inst.n);
         IntVar totalProfit = model.intVar("profit", 0, Arrays.stream(inst.profits).sum());
+        IntVar totalWeight = model.intVar("weight", 0, inst.capacity);
 
-        // Contraintes
-        model.scalar(x, inst.weights, "<=", inst.capacity).post();
-        model.scalar(x, inst.profits, "=", totalProfit).post();
+        model.knapsack(x, totalWeight, totalProfit, inst.weights, inst.profits).post();
+        model.setObjective(Model.MAXIMIZE, totalProfit);
 
         Solver solver = model.getSolver();
 
-        // --- CONFIGURATION LNS ---
-        // On définit un voisinage aléatoire (RLNS) qui libère une partie des variables
-        // Ici, on utilise un sélecteur de voisinage par défaut de Choco
-        solver.setLNS(INeighborFactory.blackBox(x)); 
+        // voisinage : relaxation aléatoire de 15% des variables
+        IntVar[] xInt = Arrays.stream(x).toArray(IntVar[]::new);
+        solver.setLNS(INeighborFactory.propagationGuided(xInt));
 
-        // Stratégie de recherche de base (utilisée pour réparer le voisinage)
+        // Stratégie Simple repair
         solver.setSearch(Search.intVarSearch(
-            new VariableSelectorWithTies<>(new FirstFail(model), new Smallest()),
-            new IntDomainBest(), 
-            x
+                var -> {
+                    for (BoolVar integers : x) {
+                        if (!integers.isInstantiated()) return integers;
+                    }
+                    return null;
+                },
+                var -> 1, // On essaie de placer les objects dans le sac en premier
+                x
         ));
 
-        // Paramétrage des Restarts (important pour ne pas rester bloqué dans un voisinage)
-        // On redémarre si on échoue 100 fois à améliorer la solution dans le voisinage
-        solver.setRestarts(count -> solver.getFailCount() >= 100, new LubyCutoff(100), 10000);
-        
         solver.limitTime(timeLimit);
-        long start = System.currentTimeMillis();
-        model.setObjective(Model.MAXIMIZE, totalProfit);
 
-        int bestValue = 0;
-        while (solver.solve()) {
-            bestValue = totalProfit.getValue();
-        }
-        
+        long start = System.currentTimeMillis();
+        solver.solve();
         long elapsed = System.currentTimeMillis() - start;
+        int bestValue = solver.getBestSolutionValue().intValue();
 
         return new Result(
             inst.name, 
@@ -443,7 +536,7 @@ public class KnapsackSolver {
             false, 
             inst.optimalValue
         );
-    }*/
+    }
 
 
     /*static Result solveIncompleteGreedy(Instance inst, long timeLimit) {
@@ -543,7 +636,7 @@ public class KnapsackSolver {
         int totalWeight = 0;
         int totalProfit = 0;
 
-        double alpha = 1; // paramètre probabiliste
+        double alpha = 0.9; // paramètre probabiliste
         Random rand = new Random(); // aléatoire
 
         // Ensemble des composants candidats
@@ -650,10 +743,7 @@ public class KnapsackSolver {
         byDifficulty.put("difficile", new ArrayList<>());
 
         for (Result r : results) {
-            Instance inst = instances.stream().filter(i -> i.name.equals(r.instance)).findFirst().orElse(null);
-            if (inst != null) {
-                byDifficulty.get(inst.difficulty).add(r);
-            }
+            instances.stream().filter(i -> i.name.equals(r.instance)).findFirst().ifPresent(inst -> byDifficulty.get(inst.difficulty).add(r));
         }
 
         for (String diff : Arrays.asList("facile", "moyen", "difficile")) {
@@ -688,27 +778,30 @@ public class KnapsackSolver {
         }
 
         List<Result> allResults = new ArrayList<>();
-        long timeLimit = 10 * 60 * 1000; // 10 minutes
+        long timeLimit = 5 * 60 * 1000; // 10 minutes
 
         System.out.println("=== Résolution en cours ===");
         for (Instance inst : instances) {
-            /*System.out.println("\nInstance: " + inst.name + " (n=" + inst.n + ", capacité=" + inst.capacity + ", difficulté=" + inst.difficulty + ")");
+            System.out.println("\nInstance: " + inst.name + " (n=" + inst.n + ", capacité=" + inst.capacity + ", difficulté=" + inst.difficulty + ")");
             
-            Result r1 = solveCompleteFirstFail(inst, timeLimit);
+            /*Result r1 = solveCompleteFirstFail(inst, timeLimit);
             allResults.add(r1);
-            System.out.println("  - Complete FirstFail : Valeur=" + r1.bestValue + ", Temps=" + r1.timeMs + "ms");
+            System.out.println("  - Complete FirstFail : Valeur=" + r1.bestValue + ", Temps=" + r1.timeMs + "ms");*/
+            Result r1 = solveCompleteRatioFirst(inst, timeLimit);
+            allResults.add(r1);
+            System.out.println("  - Complete RatioFirst : Valeur=" + r1.bestValue + ", Temps=" + r1.timeMs + "ms");
             
             Result r2 = solveCompleteDomOverWDeg(inst, timeLimit);
             allResults.add(r2);
-            System.out.println("  - Complete DomOverWDeg : Valeur=" + r2.bestValue + ", Temps=" + r2.timeMs + "ms");*/
+            System.out.println("  - Complete DomOverWDeg : Valeur=" + r2.bestValue + ", Temps=" + r2.timeMs + "ms");
             
             Result r3 = solveCompleteMILP_ORTools(inst, timeLimit);
             allResults.add(r3);
             System.out.println("  - Complete MILP OR-Tools : Valeur=" + r3.bestValue + ", Temps=" + r3.timeMs + "ms");
             
-            /*Result r5 = solveIncompleteGreedy(inst, timeLimit);
+            Result r5 = solveIncompleteGreedy(inst, timeLimit);
             allResults.add(r5);
-            System.out.println("  - Incomplete Greedy : Valeur=" + r5.bestValue + ", Temps=" + r5.timeMs + "ms");*/
+            System.out.println("  - Incomplete Greedy : Valeur=" + r5.bestValue + ", Temps=" + r5.timeMs + "ms");
             
             Result r4 = solveIncompleteLNS(inst, timeLimit);
             allResults.add(r4);
